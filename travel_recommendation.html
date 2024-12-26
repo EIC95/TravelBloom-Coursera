@@ -8,85 +8,34 @@
 </head>
 <body>
     <nav>
-        <div>
+        <div class="website-name">
             <img src="img/plane.png" alt="plane icon">
             <h4>TravelBloom</h4>
         </div>
-        <div>
-            <a href="">Home</a>
-            <a href="">About Us</a>
-            <a href="">Contact Us</a>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
         </div>
-        <div>
+        <div class="search-bar">
             <form id="search-form">
                 <input id="Input" type="text" placeholder="Enter a destination or keyword">
                 <button type="submit">Search</button>
-                <button type="reset">Clear</button>
+                <button id="Clear-button">Clear</button>
             </form>
             <div id="show"></div>
         </div>
     </nav>
 
-    <section>
-        <div>
-            <div></div>
-            <div>
-                <img src="">
-                <img src="">
-                <img src="">
-                <img src="">
-            </div>
-        </div>
-        <div>
+    <main>
+        <section class="hero" id="hero">
             <h1>EXPLORE DREAM DESTINATION</h1>
             <p>It encourages exploration of unfamiliar territories, embracing divese cultures and landscapes, while pursuing the desired destination that captivates the heart and ignites a sense of wonder.</p>
             <a href="#">BOOK NOW</a>
-        </div>
-    </section>
-
-    <section>
-        <h1>ABOUT US</h1>
-        <p>
-            Welcome to Our Company! We are a team of passionate individuals dedicated to providing excellent services/products to our customel? Our mission js to provide the best experience for people traveling to different destinations around the world.
-            Our values include integrity, innovation, customer satisfaction; and teamwork we believe in putting our customers first and working together to achieve our goals.
-            Feel free to explore our website to learn more about what we offer!
-        </p>
-        <div>
-            <h1>Our Team</h1>
-            <div>
-                <img src="" alt="">
-                <h2>John Doe</h2>
-                <p>John is responsible for...</p>
-                <p><strong>CEO</strong></p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <h2>John Doe</h2>
-                <p>John is responsible for...</p>
-                <p><strong>CEO</strong></p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <h2>John Doe</h2>
-                <p>John is responsible for...</p>
-                <p><strong>CEO</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h1>CONTACT US</h1>
-        <form>
-            <label>Name</label>
-            <input type="text" placeholder="Enter your name">
-            <label>Email</label>
-            <input type="text" placeholder="Enter your mail">
-            <label>Message</label>
-            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your message"></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
+        </section>
+    
+    
+    </main>
     <script src="travel_recommendation.js"></script>
 </body>
 </html>

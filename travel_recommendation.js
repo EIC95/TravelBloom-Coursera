@@ -99,18 +99,31 @@ form.addEventListener('submit', (event) => {
             }
 
             if (results.length > 0) {
-                container.innerHTML = `<h3>Search Results:</h3><ul>${results.map(item => `
-                    <li>
-                        <h4>${item.itemName}</h4>
-                        <p><strong>Category:</strong> ${item.category}</p>
-                        <p>${item.description}</p>
-                        <img src="${item.imageUrl}" alt="${item.itemName}" style="width: 200px; height: auto;">
-                    </li>`).join('')}</ul>`;
+                container.innerHTML = `<div class="results-container">${results.map(item => `
+                    <div class="result-card">
+                        <img src="${item.imageUrl}" alt="${item.itemName}" class="result-image">
+                        <div class="result-info">
+                            <h4 class="result-title">${item.itemName}</h4>
+                            <p>${item.description}</p>
+                        </div>
+                    </div>`).join('')}</div>`;
+                    console.log("results displayed", results);
             } else {
                 container.innerHTML = "<p>No results found.</p>";
             }
+
         })
         .catch(error => {
             console.log("ERROR 404: Unable to fetch data", error);
         });
 });
+
+const clear = document.getElementById("Clear-button");
+
+clear.addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('Input').value = '';
+    container.innerHTML = ''; // Clear the results
+});
+
+
